@@ -3,6 +3,6 @@ body{
 }
 
 .nav_bar{
-    display: flex;
+    display: block;
     margin: 5em;
 }
