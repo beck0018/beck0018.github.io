@@ -1,8 +1,14 @@
 body{
     display: flex;
+    width: 100%;
 }
 
 .nav_bar{
     display: block;
     margin: 5em;
+}
+
+.content{
+    width: 100%;
+    padding: 5em;
 }
