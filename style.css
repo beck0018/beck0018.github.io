@@ -1,14 +1,52 @@
+html, body {
+    height: 100%;
+    background-color: rgb(80, 80, 80);
+}
+
 body{
     display: flex;
-    width: 100%;
 }
 
 .nav_bar{
     display: block;
-    margin: 5em;
+    padding: 5em 3em ;
+    border-right: solid 2px ;
+    background-color: aliceblue;
 }
 
 .content{
     width: 100%;
-    padding: 5em;
+    margin: 3em 5em;
+}
+
+.card-link{
+    height: 100%;
+    padding: 1em 3em;
+}
+
+.card-content{
+    height: 100%;
+}
+
+.photo{
+    width: 15em;
+}
+
+.link{
+    display: grid;
+    margin: 2em 0em;
+}
+
+.link button{
+    margin: 1em;
+}
+
+
+
+.div_display_2{
+    display: none;
+}
+
+.div_display_3{
+    display: none;
 }
