@@ -1,18 +1,12 @@
 html, body {
     height: 100%;
-    background-color: rgb(80, 80, 80);
+    background-color: rgb(77, 72, 90);
 }
 
 body{
     display: flex;
 }
 
-.nav_bar{
-    display: block;
-    padding: 5em 3em ;
-    border-right: solid 2px ;
-    background-color: aliceblue;
-}
 
 .content{
     width: 100%;
@@ -32,14 +26,7 @@ body{
     width: 15em;
 }
 
-.link{
-    display: grid;
-    margin: 2em 0em;
-}
 
-.link button{
-    margin: 1em;
-}
 
 
 
@@ -49,4 +36,56 @@ body{
 
 .div_display_3{
     display: none;
+}
+
+/* bouttons */
+.nav_bar{
+    display: block;
+    padding: 5em 3em ;
+    border-right: solid 2px ;
+    background-color: rgb(43, 43, 43);
+}
+
+.link{
+    display: grid;
+    margin: 2em 0em;
+}
+
+div .display{
+    position: relative;
+    display: inline-block;
+    padding: 12px 36px;
+    margin: 10px 0;
+    color: white;
+    text-decoration: none;
+    width: 20em;
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    background: linear-gradient(90deg,rgb(119, 76, 236), rgb(78, 164, 221));
+    overflow: hidden;
+    text-align: center;
+}
+
+span{
+    position: absolute;
+    background: #fff;
+    transform: translate(-50%,-50%);
+    border-radius: 50%;
+    animation: animate 1s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes animate {
+    0%{
+        width: 0px;
+        height: 0px;
+        opacity: 0.5;
+    }
+    100%{
+        width: 500px;
+        height: 500px;
+        opacity: 0;
+    }
 }

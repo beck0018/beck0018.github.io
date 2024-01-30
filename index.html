@@ -14,20 +14,20 @@
         <img src="./src/coeur.png" class="rounded-circle mx-auto d-block img-fluid photo" alt="Chloé">
       </div>
       <div class="link">
-        <button type="button" class="btn btn-primary display_1">A propos de moi</button>
-        <button type="button" class="btn btn-primary display_2">compétences</button>
-        <button type="button" class="btn btn-primary display_3">Mes Projets</button>
+        <div class="display" data-id="1">A propos de moi</div>   
+        <div class="display" data-id="2">compétences</div>   
+        <div class="display" data-id="3">Mes Projets</div>   
       </div>
     </div>
     <div class="content">
       <div class="card card-content">
-        <div class="card-body div_display_1">
+        <div class="card-body div_display" data-id="1">
           à propos de moi 
         </div>
-        <div class="card-body div_display_2">
+        <div class="card-body div_display" data-id="2">
           mes compétences
         </div>
-        <div class="card-body div_display_3">
+        <div class="card-body div_display" data-id="3">
           mes Projets
         </div>
       </div>
@@ -39,18 +39,40 @@
 
     <script>
       $(document).ready(function () {
-        console.log("licorne");
         
-        $(".display_2").on('click', function () {
-          console.log("puet");
-
-          if ($(".div_display_2").is(':hidden')) {
-            $(".div_display_2").show();
-          } else {
-            $(".div_display_2").hide();
-          }
+        $(".display").on('click', function () {
+          $(".div_display").hide();
+          id = $(this).data("id");
+          $('.div_display[data-id="' + id + '"]').show();
         });
       });
+
+      //recupere tout les a
+      const button = document.querySelectorAll("div.display");
+      //les parcours
+      button.forEach(btn => {
+        //si click
+        btn.addEventListener('click', function(e){
+          //recupere les coordonées
+          let x = e.clientX - e.target.offsetLeft;
+          let y = e.clientY - e.target.offsetTop;
+
+          //ajouts d'un span avec les infos
+          let ripples = document.createElement('span');
+          ripples.style.left = x + 'px';
+          ripples.style.top = y + 'px';
+          //ajoutes à l'element
+          this.appendChild(ripples);
+          
+          //suprime au bout 2sec oue environ
+          setTimeout(()=> {
+            ripples.remove()
+          },1000);
+          
+        })
+      })
+
+
     </script>
 </body>
 </html>
