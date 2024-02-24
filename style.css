@@ -89,3 +89,19 @@ span{
         opacity: 0;
     }
 }
+    
+.mouve{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    animation: moveUp 3s linear;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(1000px); 
+    }
+    100% {
+        transform: translateY(0px); 
+    }
+}
